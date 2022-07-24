@@ -10,16 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="Router, skeleton">
+    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="basket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658325188426</updated>
-      <workItem from="1658325190097" duration="41618000" />
+      <workItem from="1658325190097" duration="45149000" />
     </task>
     <task id="LOCAL-00001" summary="components">
       <created>1658332406391</created>
@@ -143,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658583879159</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="basket">
+      <created>1658675610743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658675610743</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +169,8 @@
     <MESSAGE value="sort" />
     <MESSAGE value="requests" />
     <MESSAGE value="Router, skeleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Router, skeleton" />
+    <MESSAGE value="basket" />
+    <option name="LAST_COMMIT_MESSAGE" value="basket" />
   </component>
   <component name="WindowStateProjectService">
     <state x="511" y="248" key="#ESLint" timestamp="1658325483095">

@@ -9,22 +9,26 @@ import PizzaBlock from "../components/PizzaBlock";
 function Home() {
     const [item, setItem] = React.useState([])
     const [isLoading, setIsLoading] = React.useState(true)
+    const [categoryId, setCategoryId] = React.useState(0);
+    const [sortType, setSortType] = React.useState(0)
+
+    const categoryUrl = categoryId === 0 ? '' : `${categoryId}`
 
     React.useEffect(() => {
-        fetch('https://62dac46ce56f6d82a76955d1.mockapi.io/items')
+        fetch('https://62dac46ce56f6d82a76955d1.mockapi.io/items?category=' + categoryUrl)
             .then(response => response.json())
             .then((arr) => {
                 setItem(arr);
                 setIsLoading(false)
             });
         window.scrollTo(0, 0)
-    }, [])
+    }, [categoryId, sortType])
 
     return (
         <div className="container">
             <div className="content__top">
-                <Categories/>
-                <Sort/>
+                <Categories value={categoryId} onClickCategory={(id) => setCategoryId(id)}/>
+                <Sort sort={sortType} setSortType={setSortType}/>
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
