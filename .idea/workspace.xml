@@ -10,11 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="basket">
+    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="add category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -80,7 +79,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658325188426</updated>
-      <workItem from="1658325190097" duration="45149000" />
+      <workItem from="1658325190097" duration="51053000" />
+      <workItem from="1658754092968" duration="6225000" />
     </task>
     <task id="LOCAL-00001" summary="components">
       <created>1658332406391</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658675610743</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add category">
+      <created>1658683354610</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658683354610</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +168,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="components" />
@@ -170,13 +178,15 @@
     <MESSAGE value="requests" />
     <MESSAGE value="Router, skeleton" />
     <MESSAGE value="basket" />
-    <option name="LAST_COMMIT_MESSAGE" value="basket" />
+    <MESSAGE value="add category" />
+    <option name="LAST_COMMIT_MESSAGE" value="add category" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="511" y="248" key="#ESLint" timestamp="1658325483095">
+    <state x="511" y="248" key="#ESLint" timestamp="1658754124924">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="511" y="248" key="#ESLint/0.0.1280.672/1920.0.1280.672@0.0.1280.672" timestamp="1658325483095" />
+    <state x="511" y="248" key="#ESLint/0.0.1280.672@0.0.1280.672" timestamp="1658754124924" />
     <state x="391" y="139" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1658580951340">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
@@ -189,6 +199,22 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="421" y="79" key="FileChooserDialogImpl/0.0.1280.672/1920.0.1280.672@0.0.1280.672" timestamp="1658333875890" />
+    <state width="1259" height="161" key="GridCell.Tab.0.bottom" timestamp="1658755285168">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1259" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1658755285168" />
+    <state width="1259" height="161" key="GridCell.Tab.0.center" timestamp="1658755285168">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1259" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1658755285168" />
+    <state width="1259" height="161" key="GridCell.Tab.0.left" timestamp="1658755285168">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1259" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1658755285168" />
+    <state width="1259" height="161" key="GridCell.Tab.0.right" timestamp="1658755285168">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1259" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1658755285168" />
     <state x="233" y="70" key="Vcs.Push.Dialog.v2" timestamp="1658670575316">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
@@ -201,9 +227,10 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="347" y="71" width="587" height="530" key="find.popup/0.0.1280.672/1920.0.1280.672@0.0.1280.672" timestamp="1658330342155" />
-    <state x="289" y="30" width="672" height="676" key="search.everywhere.popup" timestamp="1658670609234">
+    <state x="289" y="0" width="672" height="670" key="search.everywhere.popup" timestamp="1658758062223">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="289" y="30" width="672" height="676" key="search.everywhere.popup/0.0.1280.672/1920.0.1280.672@0.0.1280.672" timestamp="1658670609234" />
+    <state x="289" y="0" width="672" height="670" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1658758062223" />
   </component>
 </project>

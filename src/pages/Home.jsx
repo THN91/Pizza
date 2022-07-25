@@ -10,12 +10,16 @@ function Home() {
     const [item, setItem] = React.useState([])
     const [isLoading, setIsLoading] = React.useState(true)
     const [categoryId, setCategoryId] = React.useState(0);
-    const [sortType, setSortType] = React.useState(0)
+    const [sortType, setSortType] = React.useState({name: "популярности", sortBy: "rating"})
 
-    const categoryUrl = categoryId === 0 ? '' : `${categoryId}`
 
     React.useEffect(() => {
-        fetch('https://62dac46ce56f6d82a76955d1.mockapi.io/items?category=' + categoryUrl)
+        const categoty = categoryId > 0 ? `category=${categoryId}` : ''
+
+        setIsLoading(true)
+
+        fetch(`https://62dac46ce56f6d82a76955d1.mockapi.io/items?${
+            categoty}&sortBy=${sortType.sortBy}&order=${sortType.order}`)
             .then(response => response.json())
             .then((arr) => {
                 setItem(arr);
