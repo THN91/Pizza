@@ -1,15 +1,13 @@
 import React from "react";
 
-function Sort({sort, setSortType}) {
+function Sort({sort, setSortType, toggleAscDesc, setToggleAscDesc}) {
     const [open, setOpen] = React.useState(false)
-    const list = [
-        {name: "популярности ASC", sortBy: "rating", order: 'asc'},
-        {name: "популярности DESC", sortBy: "rating", order: 'desc'},
-        {name: "цене ASC", sortBy: "price", order: 'asc'},
-        {name: "цене DESC", sortBy: "price", order: 'desc'},
-        {name: "алфавиту ASC", sortBy: "category", order: 'asc'},
-        {name: "алфавиту DESC", sortBy: "category", order: 'desc'}]
 
+    const list = [
+        {name: "популярности", sortBy: "rating"},
+        {name: "цене", sortBy: "price"},
+        {name: "алфавиту", sortBy: "category"}
+    ]
 
     const onClickListItem = (i) => {
         setSortType(i)
@@ -33,6 +31,12 @@ function Sort({sort, setSortType}) {
                 </svg>
                 <b>Сортировка по:</b>
                 <span onClick={() => setOpen(!open)}>{sort.name}</span>
+                <button
+                    className="toggleAscDesc"
+                    onClick={() => setToggleAscDesc(!toggleAscDesc)}
+                >
+                    {toggleAscDesc ? "🠕🠗" : "🠗🠕"}
+                </button>
             </div>
             {open && (<div className="sort__popup">
                 <ul>

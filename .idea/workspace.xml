@@ -10,16 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="search">
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/index.jsx" afterDir="false" />
+    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +82,7 @@
       <updated>1658325188426</updated>
       <workItem from="1658325190097" duration="51053000" />
       <workItem from="1658754092968" duration="11504000" />
-      <workItem from="1659108583006" duration="13004000" />
+      <workItem from="1659108583006" duration="16773000" />
     </task>
     <task id="LOCAL-00001" summary="components">
       <created>1658332406391</created>
@@ -173,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659115433437</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="context">
+      <created>1659196979030</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659196979030</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +204,8 @@
     <MESSAGE value="add category" />
     <MESSAGE value="filter url" />
     <MESSAGE value="search" />
-    <option name="LAST_COMMIT_MESSAGE" value="search" />
+    <MESSAGE value="context" />
+    <option name="LAST_COMMIT_MESSAGE" value="context" />
   </component>
   <component name="WindowStateProjectService">
     <state x="511" y="248" key="#ESLint" timestamp="1658754124924">
