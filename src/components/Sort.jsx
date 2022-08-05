@@ -1,17 +1,25 @@
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {setSortType, setToggle} from "../store/Slice/FilterSlice";
 
-function Sort({sort, setSortType, toggleAscDesc, setToggleAscDesc}) {
+const list = [
+    {name: "популярности", sortBy: "rating"},
+    {name: "цене", sortBy: "price"},
+    {name: "алфавиту", sortBy: "category"}
+]
+
+function Sort() {
+    const {sort, toggleAscDesc} = useSelector((state) => state.filter)
+    const dispatch = useDispatch()
+
     const [open, setOpen] = React.useState(false)
 
-    const list = [
-        {name: "популярности", sortBy: "rating"},
-        {name: "цене", sortBy: "price"},
-        {name: "алфавиту", sortBy: "category"}
-    ]
-
-    const onClickListItem = (i) => {
-        setSortType(i)
+    const onClickListItem = (obj) => {
+        dispatch(setSortType(obj))
         setOpen(false)
+    }
+    const changeToggle = () => {
+        dispatch(setToggle(!toggleAscDesc))
     }
 
     return (
@@ -33,7 +41,7 @@ function Sort({sort, setSortType, toggleAscDesc, setToggleAscDesc}) {
                 <span onClick={() => setOpen(!open)}>{sort.name}</span>
                 <button
                     className="toggleAscDesc"
-                    onClick={() => setToggleAscDesc(!toggleAscDesc)}
+                    onClick={changeToggle}
                 >
                     {toggleAscDesc ? "🠕🠗" : "🠗🠕"}
                 </button>
@@ -45,8 +53,7 @@ function Sort({sort, setSortType, toggleAscDesc, setToggleAscDesc}) {
                             onClick={() => onClickListItem(obj)}
                             key={obj.name}
                             className={
-                                sort.sortBy === obj.sortBy &&
-                                sort.order === obj.order
+                                sort.sortBy === obj.sortBy
                                     ? 'active' : ''}
                         >{obj.name}</li>)
                     }

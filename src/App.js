@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 
 import './scss/app.scss'
 
+
 export const SearchContent = React.createContext();
 
 function App() {
