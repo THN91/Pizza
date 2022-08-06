@@ -5,6 +5,7 @@ const initialState = {
     categoryId: 0,
     sort: {name: "популярности", sortBy: "rating"},
     toggleAscDesc: true,
+    currentPage: 1
 }
 
 export const filterSlice = createSlice({
@@ -17,13 +18,16 @@ export const filterSlice = createSlice({
         setSortType(state, action) {
             state.sort = action.payload
         },
-        setToggle(state, action){
+        setToggle(state, action) {
             state.toggleAscDesc = action.payload
+        },
+        setCurrentPage(state, action) {
+            state.currentPage = action.payload
         }
 
     },
 })
 
-export const {setCategoryId, setSortType, setToggle} = filterSlice.actions
+export const {setCategoryId, setSortType, setToggle, setCurrentPage} = filterSlice.actions
 
 export default filterSlice.reducer

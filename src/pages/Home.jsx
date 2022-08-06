@@ -1,7 +1,8 @@
 import React, {useContext} from "react";
 import {SearchContent} from "../App";
 import {useDispatch, useSelector} from "react-redux";
-import {setCategoryId} from "../store/Slice/FilterSlice";
+import {setCategoryId, setCurrentPage} from "../store/Slice/FilterSlice";
+import axios from "axios";
 
 import Categories from "../components/Categories";
 import Sort from "../components/Sort";
@@ -11,13 +12,12 @@ import Pagination from "../components/Pagination";
 
 
 function Home() {
-    const {categoryId, sort, toggleAscDesc} = useSelector((state) => state.filter)
+    const {categoryId, sort, toggleAscDesc, currentPage} = useSelector((state) => state.filter)
     const dispatch = useDispatch()
 
     const {searchValue} = useContext(SearchContent)
     const [item, setItem] = React.useState([])
     const [isLoading, setIsLoading] = React.useState(true)
-    const [currentPage, setCurrentPage] = React.useState(1);
 
     const pizzas = item.filter((obj) => {
         if (obj.name.toLowerCase().includes(searchValue.toLowerCase())) {
@@ -31,6 +31,10 @@ function Home() {
         dispatch(setCategoryId(id))
     }
 
+    const changePage = (id) => {
+        dispatch(setCurrentPage(id))
+    }
+
     React.useEffect(() => {
         const category = categoryId > 0 ? `category=${categoryId}` : ''
         const search = searchValue ? `&search=${searchValue}` : ''
@@ -38,14 +42,13 @@ function Home() {
 
 
         setIsLoading(true)
-
-        fetch(`https://62dac46ce56f6d82a76955d1.mockapi.io/items?${
+        axios.get(`https://62dac46ce56f6d82a76955d1.mockapi.io/items?${
             category}&page=${currentPage}&limit=4&sortBy=${sort.sortBy}&order=${orderAscDesc}${search}`)
-            .then(response => response.json())
-            .then((arr) => {
-                setItem(arr);
+            .then((res) => {
+                setItem(res.data);
                 setIsLoading(false)
-            });
+            })
+
         window.scrollTo(0, 0)
     }, [categoryId, sort, toggleAscDesc, searchValue, currentPage])
 
@@ -62,7 +65,7 @@ function Home() {
                     : pizzas
                 }
             </div>
-            <Pagination setCurrentPage={setCurrentPage}/>
+            <Pagination currentPage={currentPage} changePage={(id) => changePage(id)}/>
         </div>
     )
 }
