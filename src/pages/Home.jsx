@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {SearchContent} from "../App";
 import {useDispatch, useSelector} from "react-redux";
 import {setCategoryId, setCurrentPage} from "../store/Slice/FilterSlice";
@@ -16,8 +16,8 @@ function Home() {
     const dispatch = useDispatch()
 
     const {searchValue} = useContext(SearchContent)
-    const [item, setItem] = React.useState([])
-    const [isLoading, setIsLoading] = React.useState(true)
+    const [item, setItem] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     const pizzas = item.filter((obj) => {
         if (obj.name.toLowerCase().includes(searchValue.toLowerCase())) {
@@ -35,7 +35,7 @@ function Home() {
         dispatch(setCurrentPage(id))
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
         const category = categoryId > 0 ? `category=${categoryId}` : ''
         const search = searchValue ? `&search=${searchValue}` : ''
         const orderAscDesc = toggleAscDesc ? 'asc' : 'desc'

@@ -6,17 +6,24 @@ import {SearchContent} from "../../App";
 
 
 function Search() {
-    const {searchValue, setSearchValue} = useContext(SearchContent)
-    const inputRef = useRef(searchValue)
+    const [localValue, setLocalValue] = React.useState('')
+    const {setSearchValue} = useContext(SearchContent)
+    const inputRef = useRef(localValue)
 
-    const onChangeInput = useCallback(
+    const requestSendingDelay = useCallback(
         debounce((value) => {
             setSearchValue(value)
-        }, 1000), []
+        }, 250), []
     );
+
+    const onChangeInput = (value) => {
+        setLocalValue(value)
+        requestSendingDelay(value)
+    }
 
     const cleanSearchValue = () => {
         setSearchValue('')
+        setLocalValue('')
         inputRef.current.focus()
     }
 
@@ -58,10 +65,10 @@ function Search() {
             <input
                 ref={inputRef}
                 onChange={event => onChangeInput(event.target.value)}
-                value={searchValue}
+                value={localValue}
                 className={styles.input}
                 placeholder="Поиск пиццы..."/>
-            {searchValue && <svg
+            {localValue && <svg
                 className={styles.clearIcon}
                 onClick={cleanSearchValue}
                 viewBox="0 0 20 20"
