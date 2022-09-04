@@ -1,12 +1,11 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
-import {SearchContent} from "../App";
 import {useDispatch, useSelector} from "react-redux";
-import {setCategoryId, setCurrentPage, setParamsUrl} from "../store/Slice/FilterSlice";
 import axios from "axios";
 import qs from "qs";
 import {useNavigate} from "react-router-dom"
 
-
+import {SearchContent} from "../App";
+import {setCategoryId, setCurrentPage, setParamsUrl} from "../store/Slice/filterSlice";
 import Categories from "../components/Categories";
 import Sort, {list} from "../components/Sort";
 import Skeleton from "../components/PizzaBlock/Skeleton";
@@ -27,7 +26,6 @@ function Home() {
 
     const pizzas = item.filter((obj) => {
         return obj.name.toLowerCase().includes(searchValue.toLowerCase());
-
     }).map(obj => <PizzaBlock key={obj.id} {...obj}/>);
     const skeletons = [...new Array(6)].map((_, index) => <Skeleton key={index}/>)
 
