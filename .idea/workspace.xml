@@ -10,19 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="url params">
-      <change afterPath="$PROJECT_DIR$/src/components/CartItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/CartEmpty.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/Slice/filterSlice.js" afterDir="false" />
+    <list default="true" id="7bd5e3c5-475a-40a3-891d-cc9669ea39cc" name="Default Changelist" comment="cart">
+      <change afterPath="$PROJECT_DIR$/src/store/Slice/pizzaSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/CartEmpty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/CartEmpty.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/Slice/FilterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Slice/cartSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/store/Slice" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -66,12 +59,12 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Taras\Documents\testProject\pizza\src\store\Slice" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Taras\Documents\testProject\pizza\src\components\PizzaBlock" />
       <recent name="C:\Users\Taras\Documents\testProject\pizza\src\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Taras\Documents\testProject\pizza\src\store\Slice" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -120,7 +113,7 @@
       <workItem from="1661005139674" duration="3184000" />
       <workItem from="1661268553643" duration="7476000" />
       <workItem from="1661529452167" duration="414000" />
-      <workItem from="1662039664045" duration="13728000" />
+      <workItem from="1662039664045" duration="24803000" />
     </task>
     <task id="LOCAL-00001" summary="components">
       <created>1658332406391</created>
@@ -248,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660236970465</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="cart">
+      <created>1662298403530</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1662298403530</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +283,8 @@
     <MESSAGE value="useRef useCallback&#10;wait request" />
     <MESSAGE value="fix input" />
     <MESSAGE value="url params" />
-    <option name="LAST_COMMIT_MESSAGE" value="url params" />
+    <MESSAGE value="cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="511" y="248" key="#ESLint" timestamp="1658754124924">

@@ -19,6 +19,21 @@ body {
 .content {
   padding: 40px 0;
 
+  &__error-info {
+    margin: 100px auto;
+    width: 500px;
+    text-align: center;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
   &__title {
     margin: 35px 0;
   }
@@ -59,6 +74,7 @@ body {
 
       .sort {
         padding-left: 20px;
+
         b {
           display: none;
         }
@@ -67,11 +83,11 @@ body {
 
     @media (max-width: 760px) {
       .categories {
-       ul{
-         li{
-           padding: 8px 20px;
-         }
-       }
+        ul {
+          li {
+            padding: 8px 20px;
+          }
+        }
       }
       flex-direction: column-reverse;
     }
